@@ -8,7 +8,7 @@ const DashboardLayout = () => {
     const { user } = useContext(AuthContext);
     const [isAdmin] = useAdmin(user?.email)
     return (
-        <div className=''>
+        <div>
             <Navbar></Navbar>
             <div className="drawer drawer-mobile">
                 <input id="dashboard-drawer" type="checkbox" className="drawer-toggle" />
@@ -21,10 +21,9 @@ const DashboardLayout = () => {
                         <li><Link to="/dashboard">My Appointments</Link></li>
                         {
                             isAdmin && <>
-                           
-                                <li><Link to="/dashboard/allusers" className='text-yellow-600 fund-bold text-xl'>All users</Link></li>
-                                <li><Link to="/dashboard/adddoctor" className='text-yellow-600 fund-bold text-xl'>add a doctors </Link></li>
-                                <li><Link to="/dashboard/managedoctor" className='text-yellow-600 fund-bold text-xl'>Managedoctor  </Link></li>
+                                <li><Link to="/dashboard/allusers" className='text-yellow-600  fund-bold text-xl'>All users</Link></li>
+                                <li><Link to="/dashboard/adddoctor" className='text-yellow-600  fund-bold text-xl'>add a doctors </Link></li>
+                                <li><Link to="/dashboard/managedoctor" className='text-yellow-600  fund-bold text-xl'>Managedoctor  </Link></li>
                             </>
                         }
 
