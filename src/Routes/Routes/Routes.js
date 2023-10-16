@@ -12,6 +12,7 @@ import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import AddDoctors from "../../Pages/Addoctors/AddDoctors";
 import Managedoctor from "../../Pages/Managedoctor/Managedoctor";
+import MakeAppointment from "../../Pages/Home/MakeAppointment/MakeAppointment";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>
+            },
+            {
+                path: '/about',
+                element:<MakeAppointment></MakeAppointment>
             },
             {
                 path: '/login',

@@ -18,7 +18,7 @@ const ManagesDoctrsPartOne = () => {
         queryKey:['doctors'],
         queryFn: async ()=>{
             try{
-                const res= await fetch ('http://localhost:5000/doctors',{
+                const res= await fetch ('https://canadahospitailserver-9p7l5gdfk-shakilmonsi.vercel.app/doctors',{
                     headers: {
                         authorization: `bearer ${localStorage.getItem('accessToken')}`
                     }
