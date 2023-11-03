@@ -35,6 +35,8 @@ if(isLoading){
                             <th>Treatment</th>
                             <th>Date</th>
                             <th>Time</th>
+                            <th>price</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -46,6 +48,21 @@ if(isLoading){
                                 <td>{booking.treatment}</td>
                                 <td>{booking.appointmentDate}</td>
                                 <td>{booking.slot}</td>
+                                <td>{
+                                  booking.price && !booking.paid && <Link to={`/dashboard/payment/${booking._id}`}>
+                                  <button 
+                                  className='btn btn-primary'>pay</button></Link>  
+                                   
+                                
+                                   }
+
+{
+    booking.price && booking.paid && <span className='text-primary'>paid</span>
+}
+
+
+                                   
+                                   </td>
                             </tr>)
                         }
                     </tbody>

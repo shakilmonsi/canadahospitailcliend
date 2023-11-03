@@ -13,11 +13,13 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import AddDoctors from "../../Pages/Addoctors/AddDoctors";
 import Managedoctor from "../../Pages/Managedoctor/Managedoctor";
 import MakeAppointment from "../../Pages/Home/MakeAppointment/MakeAppointment";
+import DisplayError from "../../Pages/DisplayError/DisplayError";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>, 
+        errorElement: <DisplayError></DisplayError>,
         children: [
             {
                 path: '/',
@@ -44,6 +46,7 @@ const router = createBrowserRouter([
     {
         path: '/dashboard',
         element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+        errorElement: <DisplayError></DisplayError>,
         children: [
             {
                 path: '/dashboard',
